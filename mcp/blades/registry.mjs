@@ -1,5 +1,5 @@
 /**
- * FinForge MCP Hub: Central Registry
+ * WealthForge MCP Hub: Central Registry
  * Dynamically orchestrates financial 'Blades' for a unified agent experience.
  */
 

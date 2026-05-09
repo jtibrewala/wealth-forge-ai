@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * FinForge AI Setup Utility
+ * WealthForge AI Setup Utility
  * Modeled after NeuraForge AI's install.mjs
  * Automates workspace initialization, MCP configuration, and platform integration.
  */
@@ -16,7 +16,7 @@ const AGENTS_DIR = join(PROJECT_ROOT, 'agents');
 const SKILLS_DIR = join(PROJECT_ROOT, 'skills');
 const RULES_DIR = join(PROJECT_ROOT, 'rules');
 
-console.log('🚀 Initializing FinForge AI Agentic Workforce...');
+console.log('🚀 Initializing WealthForge AI Agentic Workforce...');
 
 // 0. Install Root Dependencies
 console.log('📦 Installing project dependencies...');
@@ -60,7 +60,7 @@ const mcpTemplate = {
             "env": {},
             "disabled": false
         },
-        "fin-forge-hub": {
+        "wealth-forge-hub": {
             "command": "node",
             "args": ["mcp/hub.mjs"],
             "env": {},
@@ -112,12 +112,12 @@ console.log('🎨 Deploying platform-specific adapters...');
 // Cursor
 const cursorRulesPath = join(PROJECT_ROOT, '.cursorrules');
 if (!existsSync(cursorRulesPath)) {
-    const cursorTemplate = `# FinForge AI Cursor Rules\n- Reference .gemini/prompts/GLOBAL_SYSTEM_RULES.md\n- Use FinWorth Math Engine for all calculations.`;
+    const cursorTemplate = `# WealthForge AI Cursor Rules\n- Reference .gemini/prompts/GLOBAL_SYSTEM_RULES.md\n- Use FinWorth Math Engine for all calculations.`;
     writeFileSync(cursorRulesPath, cursorTemplate);
 }
 
 // 5. Final Checklist
-console.log('\n--- FinForge AI Ready ---');
+console.log('\n--- WealthForge AI Ready ---');
 console.log('📍 Location: ' + PROJECT_ROOT);
 console.log('🤖 Agents: ' + dirs.length);
 console.log('📐 Math Engine: Integrated (finworth-js)');

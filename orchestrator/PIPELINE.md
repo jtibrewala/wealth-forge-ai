@@ -1,6 +1,6 @@
-# Orchestration Pipeline: The FinForge Workflow
+# Orchestration Pipeline: The WealthForge Workflow
 
-The FinForge Orchestrator manages the interaction between the specialized agents to provide a cohesive financial strategy.
+The WealthForge Orchestrator manages the interaction between the specialized agents to provide a cohesive financial strategy.
 
 ## 8-Stage Financial Analysis Pipeline
 

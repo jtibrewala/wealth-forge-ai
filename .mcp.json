@@ -6,7 +6,7 @@
       "env": {},
       "disabled": false
     },
-    "fin-forge-hub": {
+    "wealth-forge-hub": {
       "command": "node",
       "args": ["mcp/hub.mjs"],
       "env": {},

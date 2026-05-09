@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * FinForge MCP Hub: The Master Server
+ * WealthForge MCP Hub: The Master Server
  * A unified entry point for all custom financial intelligence.
  */
 
@@ -25,7 +25,7 @@ registry.register("portfolio", new PortfolioBlade());
 
 const server = new Server(
   {
-    name: "fin-forge-hub",
+    name: "wealth-forge-hub",
     version: "1.0.0",
   },
   {

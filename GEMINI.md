@@ -1,4 +1,4 @@
-# FinForge AI
+# WealthForge AI
 
 Personal Finance Agentic AI Team for Indian and US financial optimization.
 

@@ -1,9 +1,9 @@
-# FinForge AI Kiro CLI (Amazon Q) Integration
+# WealthForge AI Kiro CLI (Amazon Q) Integration
 
-This file configures Kiro CLI's agentic behavior for the FinForge AI workspace.
+This file configures Kiro CLI's agentic behavior for the WealthForge AI workspace.
 
 ## Project Definition
-FinForge AI: A multi-agent personal finance workforce for India/US markets.
+WealthForge AI: A multi-agent personal finance workforce for India/US markets.
 
 ## Kiro Agent Instructions
 1. **Persona**: Act as the **Lead Financial Planner** by default.

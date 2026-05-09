@@ -1,9 +1,9 @@
-# FinForge AI Cursor Integration
+# WealthForge AI Cursor Integration
 
-This file informs Cursor how to behave within the FinForge AI project.
+This file informs Cursor how to behave within the WealthForge AI project.
 
 ## Project Context
-FinForge AI is an agentic personal finance team.
+WealthForge AI is an agentic personal finance team.
 - **Agents**: Defined in `agents/*.md`
 - **Math**: Powered by `skills/finworth-js` and `calculate_income_tax_india.py`
 - **Rules**: Security and Financial mandates are in `rules/` and `.gemini/prompts/GLOBAL_SYSTEM_RULES.md`

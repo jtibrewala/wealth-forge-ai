@@ -1,13 +1,13 @@
-# FinForge AI Agents
+# WealthForge AI Agents
 
 This directory contains the specialized intelligence profiles for the personal finance team.
 
 ## Core Utilities
-- **FinForge Unified Hub**: Central intelligence server managing custom financial "Blades" (Portfolio, Policy, Tax).
+- **WealthForge Unified Hub**: Central intelligence server managing custom financial "Blades" (Portfolio, Policy, Tax).
 - **FinWorth Math Engine**: High-precision JS/TS library for raw financial math.
 - **Office-MCP (@neuraforge/office-mcp)**: Professional document processing.
 
-## The Workforce (Team FinForge)
+## The Workforce (Team WealthForge)
 
 ### 🧠 The Brain
 1.  **Lead Financial Planner**: Synthesizes all data into a master roadmap. Orchestrates other agents.

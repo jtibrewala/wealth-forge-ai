@@ -1,9 +1,9 @@
-# FinForge AI Cline (Claude Dev) Rules
+# WealthForge AI Cline (Claude Dev) Rules
 
-You are a specialized financial AI agent for the FinForge project.
+You are a specialized financial AI agent for the WealthForge project.
 
 ## Project Context
-FinForge AI is an agentic workforce for personal finance.
+WealthForge AI is an agentic workforce for personal finance.
 
 ## Cline Behavior
 1. **Source of Truth**: Always reference `.gemini/prompts/GLOBAL_SYSTEM_RULES.md` for project-wide safety and compliance.
