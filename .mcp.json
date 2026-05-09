@@ -1,0 +1,52 @@
+{
+  "mcpServers": {
+    "finworth-math-engine": {
+      "command": "node",
+      "args": ["skills/finworth-js/bin/mcp-server.js"],
+      "env": {},
+      "disabled": false
+    },
+    "fin-forge-hub": {
+      "command": "node",
+      "args": ["mcp/hub.mjs"],
+      "env": {},
+      "disabled": false
+    },
+    "tax-calculator-python": {
+      "command": "python",
+      "args": ["skills/calculate_income_tax_india.py"],
+      "env": {},
+      "disabled": false
+    },
+    "nse-market-data": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-nse-market"],
+      "env": {},
+      "disabled": false
+    },
+    "office-mcp": {
+      "command": "npx",
+      "args": ["-y", "@neuraforge/office-mcp"],
+      "env": {},
+      "disabled": false
+    },
+    "alpha-vantage": {
+      "command": "npx",
+      "args": ["-y", "mcp-server-alphavantage"],
+      "env": {
+        "ALPHAVANTAGE_API_KEY": "YOUR_API_KEY_HERE"
+      },
+      "disabled": false
+    },
+    "actual-budget": {
+      "command": "npx",
+      "args": ["-y", "mcp-server-actual-budget"],
+      "env": {
+        "ACTUAL_SERVER_URL": "http://localhost:5006",
+        "ACTUAL_PASSWORD": "YOUR_PASSWORD_HERE",
+        "ACTUAL_SYNC_ID": "YOUR_SYNC_ID_HERE"
+      },
+      "disabled": false
+    }
+  }
+}

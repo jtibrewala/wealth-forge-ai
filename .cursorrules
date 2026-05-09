@@ -1,0 +1,22 @@
+# FinForge AI Cursor Integration
+
+This file informs Cursor how to behave within the FinForge AI project.
+
+## Project Context
+FinForge AI is an agentic personal finance team.
+- **Agents**: Defined in `agents/*.md`
+- **Math**: Powered by `skills/finworth-js` and `calculate_income_tax_india.py`
+- **Rules**: Security and Financial mandates are in `rules/` and `.gemini/prompts/GLOBAL_SYSTEM_RULES.md`
+
+## Cursor Instructions
+1. **Always refer to GLOBAL_SYSTEM_RULES.md** before generating financial advice.
+2. **Specialist Mapping**:
+   - If user asks about taxes -> Adhere to `agents/tax-strategist.md`
+   - If user asks about loans -> Adhere to `agents/loan-specialist.md`
+   - If user asks about wealth -> Adhere to `agents/mutual-fund-specialist.md`
+3. **Tool Awareness**:
+   - Suggest running `node skills/finworth-js/bin/mcp-server.js` if calculations are needed.
+   - Use `office-mcp` for document parsing.
+4. **Style**: 
+   - Prepend all advice with the mandatory financial disclaimer.
+   - Use Indian numbering system (Lakh/Crore) for INR.

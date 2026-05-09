@@ -1,0 +1,24 @@
+{
+  "name": "fin-forge-ai",
+  "version": "1.0.0",
+  "description": "Agentic Personal Finance Workforce for India & US",
+  "main": "scripts/setup.mjs",
+  "type": "module",
+  "scripts": {
+    "setup": "node scripts/setup.mjs"
+  },
+  "keywords": [
+    "ai",
+    "finance",
+    "agents",
+    "mcp",
+    "india",
+    "tax",
+    "wealth-management"
+  ],
+  "author": "Vikas Singh",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.3"
+  }
+}

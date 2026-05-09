@@ -1,0 +1,41 @@
+# Node
+node_modules/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv
+venv/
+ENV/
+env/
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Project Specific
+.env
+*.local
+.mcp.json.local
+
+# Dependency Submodules (Managed by scripts/setup.mjs)
+# We ignore these to keep the repo as a clean template/orchestrator
+skills/finworth-js/
+
+# IDE & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+.project
+.settings/
+.buildpath
