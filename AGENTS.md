@@ -22,3 +22,4 @@ This directory contains the specialized intelligence profiles for the personal f
 6.  **Loan Specialist**: Specializes in Home and Personal loan optimization and debt reduction.
 7.  **Budget & Cashflow Agent**: Tracks spends, builds emergency funds, and generates Excel sheets.
 8.  **Policy Scout**: Monitors RBI, SEBI, and global news for impact on personal finance.
+9.  **Stress Tester**: Simulates "Black Swan" market events to test roadmap resilience.

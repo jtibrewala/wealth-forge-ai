@@ -16,12 +16,14 @@ import { BladeRegistry } from "./blades/registry.mjs";
 // Import Blades
 import { PolicyBlade } from "./blades/policy-blade.mjs";
 import { PortfolioBlade } from "./blades/portfolio-blade.mjs";
+import { RiskBlade } from "./blades/risk-blade.mjs";
 
 const registry = new BladeRegistry();
 
 // Initialize and Register Blades
 registry.register("policy", new PolicyBlade());
 registry.register("portfolio", new PortfolioBlade());
+registry.register("risk", new RiskBlade());
 
 const server = new Server(
   {
