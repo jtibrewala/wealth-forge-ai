@@ -1,70 +1,58 @@
 # FinForge AI 🚀
 
-**FinForge AI** is a precision-engineered agentic workforce for personal finance. It provides fiduciary-grade financial strategy, tax optimization, and debt management, specifically tuned for the **Indian** and **US** markets.
+**FinForge AI** is a technical framework for building an **agentic personal finance workforce**. It serves as an architectural showcase for orchestrating multi-agent systems using the **Model Context Protocol (MCP)**, specifically tailored for the Indian and US financial landscapes.
 
-Built with a **Unified MCP Hub** architecture, FinForge AI eliminates "AI math hallucinations" by delegating all calculations to a dedicated financial engine.
-
----
-
-## 💎 Why FinForge AI?
-
-Unlike generic financial assistants, FinForge AI uses a **"Hub & Blade"** model:
-- **Unified MCP Hub**: A central orchestration server that manages specialized "Intelligence Blades."
-- **Zero-Hallucination Math**: Every SIP, Loan EMI, and Tax Slab is calculated via the [finworth-js](https://github.com/vikisingh23/finworth-js) library.
-- **Forensic Auditing**: Specialized agents that calculate the real IRR of insurance policies (LIC/ULIP) and audit GWP plans for hidden caps.
-- **Cross-Platform "Injected" Intelligence**: Adopts its full persona and toolset inside **Cursor, Claude Code, Kiro CLI, Cline, and ChatGPT**.
+> **⚠️ DISCLOSURE & LIMITATIONS**: This project is for **educational and research purposes only**. It is not a financial advisory service. AI models can hallucinate; always verify calculations and advice with a registered Chartered Accountant (CA) or Certified Financial Planner (CFP). This system does not possess a fiduciary license.
 
 ---
 
-## 👥 The Agentic Workforce
+## 💎 Architectural Highlights
 
-| Agent | Specialization | Key Intelligence Blade |
-| :--- | :--- | :--- |
-| **Lead Planner** | The "CIO" - Master ROADMAP synthesis. | `portfolio_generate_fire_roadmap` |
-| **Tax Strategist** | CA-grade optimization (44ADA, HRA, LTCG). | `tax-calculator-python` |
-| **Loan Specialist** | Debt Architect (RLLR vs MCLR, Prepayment). | `finworth_emi_amortization` |
-| **Policy Analyst** | Forensic Auditor (LIC/ULIP IRR, GWP Audit). | `policy_audit_compliance` |
-| **MF Specialist** | Quant Analyst (Overlap, Sortino, Alpha). | `alpha-vantage` / `nse-market` |
-| **Budget Agent** | Cashflow Analyst (Live sync with Actual/YNAB). | `actual-budget` sync |
-| **Profile Manager** | Data Gatekeeper (Age, City, Salary context). | Secure Context Management |
-| **Policy Scout** | Vigilant Analyst (RBI, SEBI, Global News). | `policy_get_circulars` |
+FinForge AI demonstrates a **"Hub & Blade"** orchestration model designed to solve common LLM limitations in finance:
+- **Unified MCP Hub**: A centralized orchestration layer that manages specialized logic modules ("Blades").
+- **Tool-Augmented Math**: Mitigates "AI math drift" by delegating all financial formulas to the [finworth-js](https://github.com/vikisingh23/finworth-js) math engine.
+- **Context-Injected Personas**: Cross-platform configuration files (`.cursorrules`, `.kirorules`, `CLAUDE.md`) that ensure consistent agent behavior across IDEs and CLIs.
+- **Privacy-First Design**: Prompt-level PII masking guidelines to ensure sensitive data (PAN, SSN) is not transmitted to LLM providers.
 
 ---
 
-## 🛠️ Advanced Tech Stack
+## 👥 The Agentic Research Workforce
+
+These agents are designed to simulate specialized financial reasoning paths:
+- **Lead Planner**: Synthesizes multi-agent data into a cohesive analytical roadmap.
+- **Tax Strategist**: Simulates tax logic for the FY 2024-25 Indian Finance Act.
+- **Loan Specialist**: Analyzes debt structures (RLLR vs MCLR) and prepayment math.
+- **Policy Analyst**: Extracts and audits terms from insurance benefit illustrations.
+- **MF Specialist**: Analyzes portfolio overlap and risk-adjusted return metrics.
+
+---
+
+## 🛠️ Integrated Tech Stack
 
 - **Framework**: Model Context Protocol (MCP) for tool-to-model connectivity.
-- **Master Hub**: `mcp/hub.mjs` (Unified server orchestrating pluggable Blades).
-- **Math Engine**: `finworth-js` (Local high-precision financial logic).
-- **Document Intel**: `@neuraforge/office-mcp` (Reading Insurance PDFs & generating Excel).
-- **Live Data**: Alpha Vantage (US Markets) & NSE Market Data (India).
+- **Master Hub**: `mcp/hub.mjs` (Dynamic tool routing and namespacing).
+- **Math Engine**: `finworth-js` (Deterministic local calculations).
+- **Automation**: `setup.mjs` (One-command environment initialization).
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Quick Start (For Developers)
 
-### 1. Installation
-Clone the repository and run the automated setup:
+### 1. Initialization
 ```bash
 git clone https://github.com/vikisingh23/fin-forge-ai.git
 cd fin-forge-ai
 npm run setup
 ```
 
-### 2. Plug into your Favorite AI
-FinForge AI is platform-agnostic. It will automatically inject its rules into:
-- **Cursor IDE**: Just open the folder. It detects `.cursorrules`.
-- **Kiro CLI**: Run `kiro chat`. It detects `.kirorules`.
-- **Claude Code**: Run `claude`. It detects `CLAUDE.md`.
-- **Cline (VS Code)**: It automatically adopts `.clinerules`.
-- **ChatGPT**: See `chatgpt-instructions.md` for Custom GPT setup.
+### 2. Implementation
+Connect the framework to your preferred AI (Cursor, Kiro CLI, Claude, or ChatGPT) using the provided adapter files in the root directory.
 
 ---
 
-## 🛡️ Security & Privacy
-- **PII Masking**: Agents are hardcoded to never request or store unmasked PAN, Aadhar, or SSNs.
-- **Local-First Math**: Financial calculations are performed locally on your machine.
-- **Disclosure**: FinForge AI is for informational purposes. Always verify with a registered CA or CFP.
+## 🛡️ Security & Integrity
+- **Local-First**: The `finworth` engine runs locally to keep financial math on-device.
+- **Extensible**: Designed to allow developers to drop in new "Blades" for different jurisdictions or asset classes.
 
 ## 📄 License
 MIT License. Created by [Vikas Singh](https://github.com/vikisingh23).
