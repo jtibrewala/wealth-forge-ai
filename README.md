@@ -1,6 +1,6 @@
-# WealthForge AI 🚀
+# WealthForge AI
 
-![WealthForge AI](./assets/wealth-forge-ai.png)
+![WealthForge AI](./docs/assets/wealth-forge-ai.png)
 
 **WealthForge AI** is a technical framework for building an **agentic personal finance workforce**. It serves as an architectural showcase for orchestrating multi-agent systems using the **Model Context Protocol (MCP)**, specifically tailored for the Indian and US financial landscapes.
 
