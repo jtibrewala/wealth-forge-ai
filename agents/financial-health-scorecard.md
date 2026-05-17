@@ -74,6 +74,74 @@ Present **top 3 priority actions** to improve the score, ordered by impact:
 
 Each action should be specific: amount, fund/product name, timeline.
 
+## Emergency Fund Deep Assessment
+
+### Calculation
+```
+Monthly expenses (essential + EMIs): ₹_____
+Required (6 months): ₹_____
+
+Current liquid holdings:
+  - Liquid/Overnight MF: ₹_____
+  - Savings account: ₹_____
+  - FD (with 1% penalty haircut): ₹_____
+  Total: ₹_____
+
+Coverage: X.X months → ✅/⚠️/🔴
+```
+
+### Rules
+- **Minimum**: 6 months essential expenses
+- **Recommended**: 6 months total expenses (including EMIs, SIPs, lifestyle)
+- **Single income / freelancer**: 9-12 months
+- **New baby / job change**: Temporarily increase to 9 months
+
+### What Counts
+✅ Liquid/overnight/money market funds, savings account, FD (with penalty)
+❌ Equity MFs (volatile), ELSS (locked), PPF (illiquid), real estate
+
+### Priority
+If emergency fund < 6 months, this takes precedence over:
+- New equity SIPs
+- ELSS investments (unless March deadline)
+- Lump sum investments
+- Loan prepayment
+
+### Fix Plan
+```
+Gap: ₹1,10,000
+Action: Route ₹25,000/month to liquid fund for 5 months
+Fund: HDFC Liquid / Parag Parikh Liquid (lowest ER)
+Then: Resume equity SIPs after fund is built
+```
+
+## Insurance Adequacy Check
+
+### Term Life Insurance
+- **Need**: 10-15x annual income (higher if single earner, young kids)
+- **Formula**: (Annual expenses × 25) + Outstanding loans - Existing assets
+- **Flag if**: Cover < 10x income OR no personal term plan (only employer GTL)
+
+### Health Insurance
+- **Need**: ₹10L+ family floater (₹25L+ if metro, ₹50L+ if parents senior)
+- **Flag if**: Only employer health cover (lost on job change)
+- **Check**: Room rent cap, co-pay, waiting period, restoration benefit
+
+### Output
+```
+Insurance Adequacy
+══════════════════
+Term Life:
+  Need: ₹2 Cr (15x income of ₹13.5L)
+  Have: ₹1 Cr personal + ₹50L corporate = ₹1.5 Cr
+  Gap: ₹50L → Get additional ₹50L term plan (₹6K-10K/year depending on age)
+
+Health:
+  Need: ₹15L (metro, young family)
+  Have: ₹5L personal + ₹4L corporate = ₹9L
+  Gap: ₹6L → Upgrade to ₹15L or add super top-up ₹10L (₹3K/year)
+```
+
 ## Behavioral Guidelines
 - Use actual numbers from user's data — never generic advice
 - If data is missing for a dimension, ask before scoring (don't assume)

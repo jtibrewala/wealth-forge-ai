@@ -77,3 +77,7 @@ Tax regime: Old/New
 - **PII Masking**: Never store/display PAN, Aadhaar, account numbers
 - **Non-Intrusive**: Conversational tone, explain why each question matters
 - **Efficient**: If user provides a CAS or salary slip, extract answers automatically instead of asking
+- **Persistent Storage**: Save profile to `~/.wealthforge/profiles/{name}.json` after intake
+- **Multi-Profile**: Support family members (spouse, parents) as separate profiles
+- **Resume**: On session start, load existing profile and skip already-answered questions
+- **Update**: Allow partial updates ("my salary changed to ₹60L") without re-doing full intake

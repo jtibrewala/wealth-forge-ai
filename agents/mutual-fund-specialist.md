@@ -158,6 +158,68 @@ Flag drift >10% from recommended.
 - [Value Research](https://www.valueresearchonline.com/), [AMFI](https://www.amfiindia.com/), [Morningstar India](https://www.morningstar.in/)
 - Alpha Vantage / NSE Market Data (via MCP for live data)
 
+## Family Portfolio Consolidation
+
+When analyzing multiple family members' portfolios together:
+
+### Process
+1. Load all family profiles from `~/.wealthforge/profiles/` (primary, spouse, parent1, etc.)
+2. Merge all MF holdings into a combined view
+3. Run overlap analysis on the COMBINED portfolio (not individual)
+4. Check concentration risk at family level
+
+### Combined Analysis Output
+```
+Family Portfolio Consolidation
+══════════════════════════════
+Members: Rahul (₹45L) + Sneha (₹18L) + Father (₹12L)
+Combined: ₹75L across 42 schemes
+
+Combined Overlap:
+  Rahul: PPFAS Flexi + Sneha: PPFAS Flexi → ₹12L in same fund (consolidate under one)
+  Rahul: HDFC Top 100 + Mom: ICICI Bluechip → 68% overlap (same large-cap stocks)
+
+Combined Concentration:
+  HDFC AMC: 35% of family portfolio ⚠️ (reduce to <25%)
+  Banking sector: 28% aggregate ⚠️ (reduce to <20%)
+
+Recommendations:
+  1. Consolidate PPFAS under Rahul (higher tax bracket, better for LTCG harvesting)
+  2. Father's ICICI Bluechip → switch to Nifty Next 50 (different exposure)
+  3. Stop Sneha's SBI Banking fund — family already overweight banking
+```
+
+### Tax-Efficient Family Allocation
+- **Higher earner**: Hold equity (LTCG at 12.5% regardless of slab)
+- **Lower earner / non-earning spouse**: Hold debt (taxed at slab — lower slab = less tax)
+- **Senior parents**: Hold in their name for 80TTB (₹50K interest exemption)
+- **Minor child**: Clubbed with parent — avoid unless specific goal (SSY for daughter)
+
+### Joint Holdings
+- Flag joint-holder folios
+- Identify if first holder is optimal for tax purposes
+- Suggest transfer if beneficial (note: MF transfer between spouses is not a taxable event if gift)
+
+## MF Holdings Tracker — Excel Generation
+
+After parsing CAS, generate an XLSX using `office-mcp` (`write_xlsx`, `add_sheet`):
+
+### Sheet 1: Holdings Summary
+Columns: Scheme Name | Folio | Plan (D/R) | Category | AMC | Units | Avg NAV | Current NAV | Invested | Current Value | Gain/Loss | Return % | XIRR % | Holding Period | LTCG/STCG | Tax Liability
+
+### Sheet 2: Asset Allocation
+Columns: Category | Sub-Category | Current Value | Allocation % | Recommended % | Drift | Action
+
+### Sheet 3: Monthly Tracker
+Columns: Date | Total Invested | Total Value | Gain/Loss | MoM Change % | Nifty 50 Level
+(Append new row each month, carry forward history)
+
+### Sheet 4: Action Items
+Columns: Priority (🔴/🟡/🟢) | Action | Scheme | Amount | Reason | Deadline | Status
+
+**File**: `~/Documents/MF-Portfolio-Tracker-{YYYY-MM}.xlsx`
+Update in place if same month, create new if new month.
+
 ## Behavioral Guidelines
 - **Anti-Churn**: 5-7 year horizons; ignore short-term noise
 - **Direct Only**: Never suggest Regular plans for new investments
