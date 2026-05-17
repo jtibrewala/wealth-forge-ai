@@ -10,7 +10,7 @@ This document outlines how to efficiently use the WealthForge agentic workforce 
 1.  **Input**: "I earn ₹22 LPA, pay ₹45k rent in Bangalore, and have ₹1.5L in 80C. Old or New?"
 2.  **Process**:
     *   `Lead Planner` tasks the `Tax Strategist`.
-    *   `Tax Strategist` uses `tax-calculator-python` to compute exact liabilities.
+    *   `Tax Strategist` uses `finworth_income_tax` to compute exact liabilities for both regimes.
     *   `Tax Strategist` checks for "leaks" (e.g., NPS 80CCD(1B) or 80D).
 3.  **Outcome**: A side-by-side comparison table with a clear "Analytical Verdict."
 

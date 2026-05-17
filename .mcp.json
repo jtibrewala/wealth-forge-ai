@@ -12,12 +12,7 @@
       "env": {},
       "disabled": false
     },
-    "tax-calculator-python": {
-      "command": "python",
-      "args": ["skills/calculate_income_tax_india.py"],
-      "env": {},
-      "disabled": false
-    },
+
     "nse-market-data": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-nse-market"],
