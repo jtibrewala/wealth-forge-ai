@@ -49,7 +49,7 @@
     <header class="relative overflow-hidden pt-20 pb-32">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-widest">
-                Architecture v1.0.0
+                Architecture v2.0.0 — FY 2025-26
             </div>
             
             <img src="./assets/wealth-forge-ai.png" alt="WealthForge AI" class="w-full max-w-2xl mx-auto rounded-2xl shadow-2xl border border-slate-800 mb-12">
@@ -58,8 +58,8 @@
                 WealthForge AI
             </h1>
             <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
-                An advanced architectural framework for agentic personal finance. 
-                Built on the Model Context Protocol (MCP) with deterministic math for global markets.
+                An advanced agentic framework for Indian personal finance.
+                CAS parsing, LTCG harvesting, portfolio overlap, financial health scoring — all powered by deterministic math via MCP.
             </p>
             <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
                 <a href="https://github.com/vikisingh23/wealth-forge-ai" class="px-8 py-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg font-semibold transition flex items-center">
@@ -115,10 +115,12 @@
   "protocol": "MCP 2026-05-09",
   "name": "WealthForge Unified Hub",
   "blades": [
-    "portfolio", // Strategic Roadmaps
+    "portfolio", // FIRE Roadmaps
     "policy",    // Regulatory Logic
-    "tax"        // Python Calculators
-  ]
+    "math",      // XIRR, SIP, LTCG
+    "risk"       // Safety Guardrails
+  ],
+  "engine": "finworth-js v0.8.0"
 }</code></pre>
                 </div>
             </div>
@@ -129,48 +131,58 @@
     <section class="py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
             <h2 class="text-4xl font-bold mb-4">The Workforce</h2>
-            <p class="text-slate-400">8 Specialized Agents working in coordination.</p>
+            <p class="text-slate-400">10 Specialized Agents working in coordination.</p>
         </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             <div class="blade-card p-6 rounded-xl">
                 <i class="fas fa-brain text-emerald-500 text-2xl mb-4"></i>
                 <h3 class="font-bold mb-2">Lead Planner</h3>
-                <p class="text-sm text-slate-400 leading-snug">The Master Conductor. Synthesizes inputs into a cohesive 20-year roadmap.</p>
+                <p class="text-sm text-slate-400 leading-snug">Synthesizes inputs into a cohesive financial roadmap.</p>
             </div>
             <div class="blade-card p-6 rounded-xl">
                 <i class="fas fa-file-invoice-dollar text-blue-500 text-2xl mb-4"></i>
                 <h3 class="font-bold mb-2">Tax Strategist</h3>
-                <p class="text-sm text-slate-400 leading-snug">Deep logic for ITD sections 44ADA, 80C, and LTCG optimization (FY 2026).</p>
+                <p class="text-sm text-slate-400 leading-snug">FY 2025-26 slabs, Labour Code, complete deductions reference.</p>
             </div>
             <div class="blade-card p-6 rounded-xl">
                 <i class="fas fa-chart-line text-emerald-500 text-2xl mb-4"></i>
                 <h3 class="font-bold mb-2">MF Specialist</h3>
-                <p class="text-sm text-slate-400 leading-snug">Quant analysis of portfolio overlap, Sharpe ratios, and tax-efficient gain harvesting.</p>
+                <p class="text-sm text-slate-400 leading-snug">CAS parsing, overlap, LTCG harvesting, SIP restructuring.</p>
+            </div>
+            <div class="blade-card p-6 rounded-xl">
+                <i class="fas fa-heartbeat text-rose-500 text-2xl mb-4"></i>
+                <h3 class="font-bold mb-2">Health Scorecard</h3>
+                <p class="text-sm text-slate-400 leading-snug">0-100 financial health score across 6 dimensions.</p>
             </div>
             <div class="blade-card p-6 rounded-xl">
                 <i class="fas fa-shield-halved text-blue-500 text-2xl mb-4"></i>
                 <h3 class="font-bold mb-2">Policy Analyst</h3>
-                <p class="text-sm text-slate-400 leading-snug">Forensic auditing of insurance IRR (LIC/ULIP) and GWP benefit plans.</p>
+                <p class="text-sm text-slate-400 leading-snug">Insurance IRR audit (LIC/ULIP/GWP), surrender analysis.</p>
             </div>
             <div class="blade-card p-6 rounded-xl">
                 <i class="fas fa-house-chimney text-emerald-500 text-2xl mb-4"></i>
                 <h3 class="font-bold mb-2">Loan Specialist</h3>
-                <p class="text-sm text-slate-400 leading-snug">Analyzes RLLR vs MCLR and interest-saving prepayment architectural paths.</p>
+                <p class="text-sm text-slate-400 leading-snug">RLLR vs MCLR, balance transfer, prepay vs invest.</p>
             </div>
             <div class="blade-card p-6 rounded-xl">
                 <i class="fas fa-wallet text-blue-500 text-2xl mb-4"></i>
                 <h3 class="font-bold mb-2">Budget Agent</h3>
-                <p class="text-sm text-slate-400 leading-snug">Live sync with Actual Budget/YNAB to identify leaks and generate Excel plans.</p>
+                <p class="text-sm text-slate-400 leading-snug">Cashflow analysis, emergency fund, expense tracking.</p>
             </div>
             <div class="blade-card p-6 rounded-xl">
-                <i class="fas fa-user-shield text-emerald-500 text-2xl mb-4"></i>
-                <h3 class="font-bold mb-2">Profile Manager</h3>
-                <p class="text-sm text-slate-400 leading-snug">Secures and manages Age, City, and Salary context across the agentic team.</p>
+                <i class="fas fa-clipboard-question text-emerald-500 text-2xl mb-4"></i>
+                <h3 class="font-bold mb-2">Intake Specialist</h3>
+                <p class="text-sm text-slate-400 leading-snug">25-question, 7-phase structured financial data collection.</p>
+            </div>
+            <div class="blade-card p-6 rounded-xl">
+                <i class="fas fa-bolt text-amber-500 text-2xl mb-4"></i>
+                <h3 class="font-bold mb-2">Stress Tester</h3>
+                <p class="text-sm text-slate-400 leading-snug">Black swan simulation, sequence-of-return risk testing.</p>
             </div>
             <div class="blade-card p-6 rounded-xl">
                 <i class="fas fa-satellite-dish text-blue-500 text-2xl mb-4"></i>
                 <h3 class="font-bold mb-2">Policy Scout</h3>
-                <p class="text-sm text-slate-400 leading-snug">Vigilant monitoring of RBI, SEBI, and Global News for immediate wallet impact.</p>
+                <p class="text-sm text-slate-400 leading-snug">RBI, SEBI, Budget regulatory monitoring.</p>
             </div>
         </div>
     </section>

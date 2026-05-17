@@ -2,17 +2,17 @@
 
 ![WealthForge AI](./docs/assets/wealth-forge-ai.png)
 
-**WealthForge AI** is a technical framework for building an **agentic personal finance workforce**. It serves as an architectural showcase for orchestrating multi-agent systems using the **Model Context Protocol (MCP)**, specifically tailored for the Indian and US financial landscapes.
+**WealthForge AI** is a technical framework for building an **agentic personal finance workforce**. It orchestrates multi-agent systems using the **Model Context Protocol (MCP)**, tailored for the Indian financial landscape (FY 2025-26).
 
 [**🌐 Live Presentation Site**](https://vikisingh23.github.io/wealth-forge-ai/)
 
-> **⚠️ DISCLOSURE & LIMITATIONS**: This project is for **educational and research purposes only**. It is not a financial advisory service. AI models can hallucinate; always verify calculations and advice with a registered Chartered Accountant (CA) or Certified Financial Planner (CFP). This system does not possess a fiduciary license.
+> **⚠️ DISCLOSURE**: This project is for **educational and research purposes only**. It is not a financial advisory service. Always verify with a registered CA or CFP.
 
 ---
 
 ## 🏛️ System Architecture
 
-WealthForge AI utilizes a **"Hub & Blade"** orchestration model. This ensures a single entry point for all specialized financial intelligence.
+WealthForge AI utilizes a **"Hub & Blade"** orchestration model with deterministic math.
 
 ```mermaid
 graph TD
@@ -22,11 +22,12 @@ graph TD
     subgraph Blades [Intelligence Blades]
         Hub --> PB[Policy Blade: Regulatory/Audit]
         Hub --> POB[Portfolio Blade: FIRE/Allocation]
-        Hub --> TB[Tax Blade: Python Math]
+        Hub --> MB[Math Blade: XIRR/SIP/LTCG]
+        Hub --> RB[Risk Blade: Guardrails]
     end
     
     subgraph Utilities [Core Math & Tools]
-        Hub --> FW[FinWorth JS Engine]
+        Hub --> FW[FinWorth JS v0.8.0]
         Hub --> OM[Office-MCP: PDF/Excel]
         Hub --> AV[Alpha Vantage: Live Data]
     end
@@ -34,59 +35,75 @@ graph TD
 
 ---
 
-## 💎 Architectural Highlights
+## 💎 Key Capabilities
 
-- **Unified MCP Hub**: A centralized orchestration layer that manages specialized logic modules ("Blades").
-- **Tool-Augmented Math**: Mitigates "AI math drift" by delegating all financial formulas to the [finworth-js](https://github.com/vikisingh23/finworth-js) math engine.
-- **Context-Injected Personas**: Cross-platform configuration files (`.cursorrules`, `.kirorules`, `CLAUDE.md`) that ensure consistent agent behavior across IDEs and CLIs.
-- **Privacy-First Design**: Prompt-level PII masking guidelines to ensure sensitive data (PAN, SSN) is not transmitted to LLM providers.
-
----
-
-## 👥 The Agentic Research Workforce
-
-These agents are designed to simulate specialized financial reasoning paths:
-- **Lead Planner**: Synthesizes multi-agent data into a cohesive analytical roadmap.
-- **Tax Strategist**: Simulates tax logic for the FY 2026-25 Indian Finance Act.
-- **Loan Specialist**: Analyzes debt structures (RLLR vs MCLR) and prepayment math.
-- **Policy Analyst**: Extracts and audits terms from insurance benefit illustrations.
-- **MF Specialist**: Analyzes portfolio overlap and risk-adjusted return metrics.
+- **CAS Statement Parsing**: Reads CAMS/KFintech/MFCentral PDFs, extracts holdings, calculates XIRR
+- **LTCG Tax Harvesting**: Auto-generates month-by-month exit plans within ₹1.25L exemption
+- **Portfolio Overlap Detection**: Flags >70% overlap, concentration risk, underperformers
+- **Financial Health Scorecard**: 0-100 score across 6 dimensions with priority actions
+- **Labour Code 2025 Compliance**: Salary breakup (basic ≥50%), ESI, fixed-term gratuity
+- **FY 2025-26 Tax Engine**: New regime slabs, ₹12.75L zero-tax threshold, full deductions reference
+- **SIP Restructuring**: Date spreading, step-up projections, category completeness
+- **Direct vs Regular Audit**: 10-year cost projection for Regular plan holders
+- **Deterministic Math**: All calculations via [finworth-js](https://github.com/vikisingh23/finworth-js) — zero LLM hallucination on numbers
 
 ---
 
-## 🛠️ Integrated Tech Stack
+## 👥 The Agentic Workforce
 
-- **Framework**: Model Context Protocol (MCP) for tool-to-model connectivity.
-- **Master Hub**: `mcp/hub.mjs` (Dynamic tool routing and namespacing).
-- **Math Engine**: `finworth-js` (Deterministic local calculations).
-- **Automation**: `setup.mjs` (One-command environment initialization).
+| Agent | Role |
+|-------|------|
+| **Lead Planner** | Synthesizes multi-agent data into a cohesive roadmap |
+| **Tax Strategist** | FY 2025-26 slabs, Old vs New regime, Labour Code, complete deductions reference |
+| **MF Specialist** | CAS parsing, overlap, LTCG harvesting, SIP restructuring, Direct/Regular audit |
+| **Financial Health Scorecard** | 0-100 scoring across Emergency Fund, Debt, Insurance, Investments, Tax, Goals |
+| **Loan Specialist** | RLLR vs MCLR, balance transfer math, prepayment vs invest analysis |
+| **Policy Analyst** | Insurance audit (LIC/ULIP/GWP), IRR calculation, surrender analysis |
+| **Budget Agent** | Cashflow analysis, 50/30/20 rule, emergency fund planning |
+| **Intake Specialist** | 25-question, 7-phase structured financial data collection |
+| **Stress Tester** | Black swan simulation, sequence-of-return risk, resilience scoring |
+| **Policy Scout** | RBI/SEBI/Budget regulatory monitoring |
 
 ---
 
-## 🚀 Quick Start (Efficient Usage)
+## 🛠️ Tech Stack
 
-### 1. Installation
+- **Framework**: Model Context Protocol (MCP)
+- **Hub**: `mcp/hub.mjs` — Dynamic tool routing with 4 blades (Policy, Portfolio, Math, Risk)
+- **Math Engine**: [finworth-js v0.8.0](https://github.com/vikisingh23/finworth-js) — 22+ financial calculators
+- **Python Engine**: [finworth v0.8.0](https://github.com/vikisingh23/finworth) — Same calculators for Python workflows
+- **Cross-IDE**: `.cursorrules`, `.kirorules`, `CLAUDE.md`, `.gemini/` — works everywhere
+- **Setup**: `npm run setup` — one-command initialization
+
+---
+
+## 🚀 Quick Start
+
 ```bash
 git clone https://github.com/vikisingh23/wealth-forge-ai.git
 cd wealth-forge-ai
 npm run setup
 ```
 
-### 2. Connect Your AI
-Open the project in **Cursor**, **Kiro CLI**, or **Claude Code**. The framework will automatically inject the "WealthForge" persona and toolset into the session.
+Open in **Cursor**, **Kiro CLI**, or **Claude Code**. The framework auto-injects the WealthForge persona.
 
-### 3. Example Execution
-To use the framework efficiently, provide your core profile in the first prompt:
-> *"I am 30, living in Mumbai, earning ₹25L base. Using the WealthForge framework, audit my ₹10k monthly LIC policy (PDF attached) and suggest a tax-efficient retirement path."*
+### Example
+> *"I am 35, Mumbai, ₹42L CTC. Parse my CAS (attached), run overlap analysis, generate LTCG harvesting plan for this FY, and score my financial health."*
 
 ---
 
-## 📈 Example Workflows
-For detailed walkthroughs on **Tax Optimization**, **FIRE Planning**, and **Insurance Auditing**, see [WORKFLOWS.md](./docs/WORKFLOWS.md).
+## 📈 Workflows
 
-## 🛡️ Security & Integrity
-- **Local-First**: The `finworth` engine runs locally to keep financial math on-device.
-- **Extensible**: Designed to allow developers to drop in new "Blades" for different jurisdictions or asset classes.
+See [WORKFLOWS.md](./docs/WORKFLOWS.md) for detailed walkthroughs:
+- Tax Regime Battle (Old vs New with breakeven)
+- FIRE Roadmap (corpus + SIP + milestones)
+- Insurance Forensic (IRR audit)
+- Portfolio Cleanup (overlap → consolidation → exit calendar)
+
+## 🛡️ Security
+- **Local-First**: FinWorth engine runs on-device
+- **PII Masking**: Prompt-level rules prevent PAN/Aadhaar transmission
+- **Risk Guardrails**: Hard-coded policies (max equity = 100 - age, emergency fund checks)
 
 ## 📄 License
 MIT License. Created by [Vikas Singh](https://github.com/vikisingh23).
