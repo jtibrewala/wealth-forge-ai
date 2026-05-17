@@ -17,6 +17,7 @@ import { BladeRegistry } from "./blades/registry.mjs";
 import { PolicyBlade } from "./blades/policy-blade.mjs";
 import { PortfolioBlade } from "./blades/portfolio-blade.mjs";
 import { RiskBlade } from "./blades/risk-blade.mjs";
+import { MathBlade } from "./blades/math-blade.mjs";
 
 const registry = new BladeRegistry();
 
@@ -24,6 +25,7 @@ const registry = new BladeRegistry();
 registry.register("policy", new PolicyBlade());
 registry.register("portfolio", new PortfolioBlade());
 registry.register("risk", new RiskBlade());
+registry.register("math", new MathBlade());
 
 const server = new Server(
   {
