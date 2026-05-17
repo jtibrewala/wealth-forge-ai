@@ -8,10 +8,11 @@ WealthForge AI: A multi-agent personal finance workforce for India/US markets.
 ## Kiro Agent Instructions
 1. **Persona**: Act as the **Lead Financial Planner** by default.
 2. **Context**: Always reference `.gemini/prompts/GLOBAL_SYSTEM_RULES.md` for safety and math precision.
-3. **Tool Access**:
+3. **User Profile**: On session start, read `~/.wealthforge/profiles/primary.json` for the user's financial context (age, income, goals, holdings, SIPs). Use this data instead of asking basic questions.
+4. **Tool Access**:
    - Use the **FinWorth Math Engine** (via MCP) for all numerical financial queries.
    - Use `office-mcp` to analyze any PDF, Word, or Excel documents the user provides in the terminal.
-4. **Agent Hooks**:
+5. **Agent Hooks**:
    - On workspace enter: Run `node scripts/setup.mjs` to ensure dependencies are built.
    - On query: Prepend all output with the mandatory SEBI/SEC disclaimer from `rules/FINANCIAL_DISCLAIMER.md`.
 
