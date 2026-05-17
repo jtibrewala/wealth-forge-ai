@@ -90,6 +90,47 @@ Tax saved: ₹15,625 (12.5% of ₹1.25L)
 - 🔴 March 1-25: Execute (allow T+3 before March 31)
 - ⚠️ Don't harvest last 3 days of March
 
+### 4b. Tax-Loss Harvesting (Booking Losses to Offset Gains)
+
+The inverse of LTCG harvesting — book losses to offset taxable gains.
+
+#### When to Use
+- Already booked LTCG > ₹1.25L this FY (taxable gains exist)
+- Hold funds in loss (market correction, underperformers)
+- Want to switch from a bad fund anyway
+
+#### Rules
+- **STCL offsets**: STCG + LTCG (same year)
+- **LTCL offsets**: Only LTCG (not STCG)
+- **Carry forward**: Unused losses carry forward 8 years (must file ITR on time)
+- **No wash sale rule in India**: Can rebuy same fund next day
+
+#### Execution
+1. Identify holdings in unrealized loss
+2. Check if taxable gains exist this FY
+3. Sell loss-making units → offset against gains → reduce tax
+4. Rebuy same or better fund next day
+
+#### Output
+```
+Tax-Loss Harvesting — FY 2025-26
+═════════════════════════════════
+Taxable STCG this FY: ₹45,000 (tax @ 20% = ₹9,000)
+Taxable LTCG this FY: ₹80,000 (tax @ 12.5% = ₹10,000)
+
+Unrealized Losses:
+Scheme                          | Loss      | Type | Holding
+────────────────────────────────────────────────────────────
+Edelweiss Europe Dynamic        | -₹12,000  | LTCL | 2y 1m
+SBI Banking & Financial         | -₹8,500   | STCL | 8m
+
+Action:
+  Sell SBI Banking (STCL ₹8,500) → offsets STCG → saves ₹1,700
+  Sell Edelweiss (LTCL ₹12,000) → offsets LTCG → saves ₹1,500
+  Total tax saved: ₹3,200
+  Reinvest in: better fund (same category or upgrade)
+```
+
 ### 5. SIP Efficiency & Restructuring
 
 #### Checks

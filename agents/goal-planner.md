@@ -81,3 +81,78 @@ As goal approaches, shift allocation:
 - Load goals from persistent profile (`~/.wealthforge/profiles/`)
 - Update progress on each review
 - Flag underfunded goals with specific "increase SIP by ₹X" recommendation
+
+## Real Estate vs Equity Comparison
+
+When user considers buying property as investment (not primary residence):
+
+### Framework
+```
+Real Estate vs Equity SIP — 10 Year Comparison
+═══════════════════════════════════════════════
+Property: ₹80L (₹16L down + ₹64L loan @ 8.5%, 20yr)
+EMI: ₹55,600/month | Maintenance: ₹5,000/month | Total outflow: ₹60,600/month
+Rental yield: ₹20,000/month (2.5% gross) → Net: ₹15,000 (after maintenance, vacancy, tax)
+Net monthly cost: ₹45,600
+
+Equity SIP of ₹45,600/month @ 12% CAGR:
+  10-year corpus: ₹1.05 Cr
+  Invested: ₹54.7L | Gains: ₹50.3L
+
+Property after 10 years (6% appreciation):
+  Value: ₹1.43 Cr | Loan outstanding: ₹42L | Equity: ₹1.01 Cr
+  Total paid (EMI+maintenance): ₹72.7L | Rental received: ₹18L
+  Net cost: ₹54.7L → Net equity: ₹1.01 Cr
+
+Verdict: Equity wins by ₹4L + liquidity + no tenant hassle
+         RE wins if: appreciation >8% OR rental yield >4% OR leverage needed
+```
+
+### Key Factors
+| Factor | Real Estate | Equity MF |
+|--------|------------|-----------|
+| Liquidity | ❌ Months to sell | ✅ T+2 days |
+| Leverage | ✅ 80% loan available | ❌ No leverage |
+| Tax on gains | 12.5% LTCG (no indexation post Jul 2024) | 12.5% above ₹1.25L |
+| Recurring cost | Maintenance, property tax, vacancy | Zero |
+| Rental income | 2-3% yield (taxable at slab) | SWP possible |
+| Emotional value | ✅ Tangible asset | ❌ Just numbers |
+
+### When RE Wins
+- Primary residence (non-negotiable need)
+- Location with >8% historical appreciation (Tier 1 micro-markets)
+- Rental yield >4% (commercial property)
+- Leverage play (low interest rate + high appreciation)
+
+## NPS vs Mutual Fund Comparison
+
+### Side-by-Side
+| Parameter | NPS | Equity MF |
+|-----------|-----|-----------|
+| Lock-in | Till 60 (partial at 3 years) | None (ELSS: 3yr) |
+| Tax benefit (Old) | ₹50K extra u/s 80CCD(1B) | ₹1.5L u/s 80C (ELSS) |
+| Tax benefit (New) | 80CCD(2) employer 14% — **BOTH regimes** | None |
+| Returns (10yr) | 9-11% (equity allocation) | 12-14% (flexi/index) |
+| Withdrawal | 60% lump sum (tax-free) + 40% annuity (taxable) | Anytime, LTCG 12.5% |
+| Fund choice | Limited (7 PFMs, 3 asset classes) | 1000+ schemes |
+| Expense ratio | 0.01-0.09% | 0.2-1.5% |
+| Flexibility | ❌ Rigid | ✅ Full control |
+
+### Decision Framework
+```
+NPS makes sense if:
+  ✅ Employer offers 80CCD(2) — FREE tax saving in BOTH regimes
+  ✅ You're in 30% slab and need extra ₹50K deduction (Old regime)
+  ✅ You lack investment discipline (forced lock-in helps)
+  ✅ You want ultra-low expense ratio
+
+MF wins if:
+  ✅ You want liquidity before 60
+  ✅ You're in New regime (no 80CCD(1B) benefit)
+  ✅ You want full fund choice and flexibility
+  ✅ You'll need the money for goals before retirement
+
+Optimal: Use BOTH
+  - NPS: Only employer 80CCD(2) contribution (free tax saving)
+  - MF: Everything else (SIPs, goals, FIRE corpus)
+```
