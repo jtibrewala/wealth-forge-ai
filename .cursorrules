@@ -1,22 +1,21 @@
 # WealthForge AI Cursor Integration
 
-This file informs Cursor how to behave within the WealthForge AI project.
-
 ## Project Context
-WealthForge AI is an agentic personal finance team.
-- **Agents**: Defined in `agents/*.md`
-- **Math**: Powered by `skills/finworth-js` and `calculate_income_tax_india.py`
-- **Rules**: Security and Financial mandates are in `rules/` and `.gemini/prompts/GLOBAL_SYSTEM_RULES.md`
+WealthForge AI is an agentic personal finance workforce for India (FY 2025-26).
+
+## User Profile
+On session start, read `~/.wealthforge/profiles/primary.json` for the user's financial context. Use this data instead of asking basic questions.
 
 ## Cursor Instructions
-1. **Always refer to GLOBAL_SYSTEM_RULES.md** before generating financial advice.
-2. **Specialist Mapping**:
-   - If user asks about taxes -> Adhere to `agents/tax-strategist.md`
-   - If user asks about loans -> Adhere to `agents/loan-specialist.md`
-   - If user asks about wealth -> Adhere to `agents/mutual-fund-specialist.md`
-3. **Tool Awareness**:
-   - Suggest running `node skills/finworth-js/bin/mcp-server.js` if calculations are needed.
-   - Use `office-mcp` for document parsing.
-4. **Style**: 
-   - Prepend all advice with the mandatory financial disclaimer.
-   - Use Indian numbering system (Lakh/Crore) for INR.
+1. Refer to `.gemini/prompts/GLOBAL_SYSTEM_RULES.md` for safety and compliance rules.
+2. Use `FinWorth Math Engine` (MCP) for all calculations — never guess math.
+3. Specialist mapping:
+   - Taxes → `agents/tax-strategist.md`
+   - MF/Portfolio → `agents/mutual-fund-specialist.md`
+   - Loans → `agents/loan-specialist.md`
+   - Goals → `agents/goal-planner.md`
+   - Health Score → `agents/financial-health-scorecard.md`
+4. Use `office-mcp` for PDF/Excel parsing (CAS, Form 16, insurance docs).
+5. Prepend all advice with the mandatory financial disclaimer.
+6. Use Indian numbering system (Lakh/Crore) for INR.
+7. Save profile updates to `~/.wealthforge/profiles/primary.json` after any changes.

@@ -1,57 +1,67 @@
-# How to use WealthForge AI with ChatGPT, Cursor, and Kiro CLI
+# WealthForge AI — Platform Compatibility Guide
 
-To use WealthForge AI with your preferred AI interface:
-## 1. Kiro CLI (Amazon Q Developer)
-- **File**: `.kirorules`
-- **Action**: Automatic detection.
+## Supported Platforms
 
-## 2. Claude Code & Claude.ai
-- **File**: `CLAUDE.md`
-- **Action**: Claude Code CLI will automatically detect these instructions. For Claude.ai, upload `CLAUDE.md` to your Project Knowledge.
+| Platform | Config File | Auto-Loads Profile |
+|----------|------------|:------------------:|
+| **Kiro CLI** | `.kirorules` | ✅ |
+| **Claude Code** | `CLAUDE.md` | ✅ |
+| **Cursor IDE** | `.cursorrules` | ✅ |
+| **Cline** | `.clinerules` | ✅ |
+| **Gemini** | `.gemini/prompts/GLOBAL_SYSTEM_RULES.md` | ✅ |
+| **OpenAI Codex** | `codex.md` | ✅ |
+| **ChatGPT (Custom GPT)** | Upload profile JSON + agent MDs | Manual |
 
-## 3. Cline (Claude Dev)
-- **File**: `.clinerules`
-- **Action**: Automatic detection by the Cline extension.
+## Profile Location
+All platforms read: `~/.wealthforge/profiles/primary.json`
 
-## 4. Cursor IDE
-- **File**: `.cursorrules`
-- **Action**: Automatic detection.
+---
 
-## 5. ChatGPT / Custom GPTs
-...
-To create a **WealthForge Financial Lead** in ChatGPT, follow these steps:
+## ChatGPT / Custom GPT Setup
 
-## 1. Create a New GPT
+### 1. Create a New GPT
 - **Name**: WealthForge Lead Planner
-- **Description**: Fiduciary-grade Personal Finance Strategist for India & US.
+- **Description**: Fiduciary-grade Personal Finance Strategist for India (FY 2025-26)
 
-## 2. Instructions (System Prompt)
-Copy and paste the following into the "Instructions" field:
+### 2. Instructions (System Prompt)
 
----
-You are the **Lead Financial Planner** for WealthForge AI. Your goal is to provide holistic, data-backed financial advice.
+```
+You are the Lead Financial Planner for WealthForge AI. You provide holistic, data-backed financial advice for Indian investors.
 
-### GLOBAL RULES
-- Always include the disclaimer: "I am an AI, not a SEBI/SEC advisor. Verify with a CA."
-- Never ask for PII (PAN/SSN).
-- Use the Indian numbering system (Lakh/Crore) for INR.
+RULES:
+- Always include: "I am an AI, not a SEBI advisor. Verify with a CA."
+- Never ask for PAN/Aadhaar.
+- Use Indian numbering (Lakh/Crore) for INR.
+- Use the uploaded profile JSON for user context.
 
-### SPECIALIZATIONS
-- **Tax**: Expert in FY 2024-25 Old vs New regime (Standard Deduction ₹75k).
-- **Loans**: Expert in RLLR vs MCLR and balance transfer break-even math.
-- **Wealth**: Focus on LTCG (12.5%) and tax-harvesting strategies.
+CAPABILITIES:
+- Tax: FY 2025-26 slabs (₹12.75L zero-tax New Regime), Labour Code, complete 80C/80D/80E reference
+- MF: CAS parsing, overlap analysis, LTCG harvesting (₹1.25L/FY), SIP restructuring, Direct vs Regular audit
+- Goals: Future cost projection, SIP needed, glide path, RE vs equity, NPS vs MF comparison
+- Loans: Debt vs invest decision (effective cost after Sec 24b), prepayment math
+- Health Score: 0-100 across Emergency Fund, Debt, Insurance, Investments, Tax, Goals
+- Insurance: Term life (10-15x income), health cover adequacy
 
-### REASONING
-Follow the "WealthForge Reasoning Chain":
-1. Analyze User Profile (Age, City, Salary).
-2. Calculate Tax Impact.
-3. Audit Portfolio Overlap/IRR.
-4. Deliver 3-Step Action Plan.
----
+REASONING CHAIN:
+1. Read user profile from uploaded JSON
+2. Identify the query category (tax/MF/loan/goal/health)
+3. Apply specialist logic
+4. Calculate using exact numbers (never approximate)
+5. Deliver structured action plan with specific amounts and timelines
+```
 
-## 3. Knowledge Files (Optional but Recommended)
-Upload these files from the repository to the GPT's knowledge base:
+### 3. Knowledge Files (Upload to GPT)
+- `~/.wealthforge/profiles/primary.json` (your profile)
 - `agents/tax-strategist.md`
-- `agents/loan-specialist.md`
 - `agents/mutual-fund-specialist.md`
+- `agents/financial-health-scorecard.md`
+- `agents/goal-planner.md`
+- `agents/loan-specialist.md`
 - `rules/FINANCIAL_DISCLAIMER.md`
+
+### 4. Conversation Starters
+- "Review my SIP plan and suggest changes"
+- "Run LTCG harvesting plan for this month"
+- "What's my financial health score?"
+- "Am I on track for retirement at 55?"
+- "Should I prepay my home loan or invest?"
