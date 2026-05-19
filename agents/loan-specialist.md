@@ -79,3 +79,97 @@ Option B — Equity SIP: Expected ₹4.8L in 5 years (12% CAGR, post-tax 10.5%)
 3. 🟡 Home loan 8-10% (no tax benefit) → Compare with equity
 4. 🟢 Home loan <8% → Almost always invest instead
 5. 🟢 Home loan with Sec 24b (old regime) → Definitely invest
+
+## P2P Lending as an Investment (RBI-Regulated)
+
+### What is P2P Lending?
+Peer-to-peer lending platforms connect lenders (investors) directly with borrowers. You earn interest (9-12% pre-tax) by lending your money to individuals/small businesses. RBI regulates these platforms under NBFC-P2P category.
+
+### RBI Rules (Master Direction 2017, updated 2024)
+
+| Rule | Limit |
+|------|-------|
+| **Max lending per lender** | ₹50,00,000 across all P2P platforms |
+| **Max to single borrower** | ₹50,000 per lender-borrower pair |
+| **Loan tenure** | Max 36 months |
+| **Platform must be** | NBFC-P2P registered with RBI |
+| **Fund transfer** | Must go through escrow account (not platform's own account) |
+| **T+1 disbursal** | Platform must transfer funds within 1 day of match |
+| **No guaranteed returns** | Platform cannot promise/guarantee any return |
+| **No secondary market** | Cannot sell/transfer loans to another lender (no liquidity) |
+
+### RBI-Registered Platforms (as of 2026)
+
+| Platform | RBI License | Min Investment | Typical Returns |
+|----------|:-----------:|:--------------:|:---------------:|
+| Lendbox | ✅ | ₹1,000 | 9-12% |
+| Faircent | ✅ | ₹5,000 | 9-14% |
+| LiquiLoans | ✅ | ₹10,000 | 10-13% |
+| i2iFunding | ✅ | ₹25,000 | 10-15% |
+| Finzy | ✅ | ₹5,000 | 9-12% |
+| 12% Club (BharatPe) | ✅ | ₹100 | 9-12% |
+
+⚠️ **Always verify RBI registration** at: https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=19417
+
+### Taxation (Critical — Often Misunderstood)
+
+| Component | Tax Treatment |
+|-----------|--------------|
+| Interest earned | **Taxed at slab rate** (same as FD interest) |
+| TDS | 10% TDS by platform if interest > ₹5,000/year |
+| Principal loss (default) | **NOT deductible** against any income |
+| No indexation | No LTCG benefit regardless of holding period |
+| ITR reporting | Report under "Income from Other Sources" |
+
+**Post-tax return at 30% slab**: 12% pre-tax → **8.4% post-tax**
+Compare with: Equity MF 12% → 10.5% post-tax (LTCG 12.5%). **Equity wins on tax efficiency.**
+
+### Risk Assessment
+
+| Risk | Severity | Mitigation |
+|------|----------|------------|
+| **Default risk** | 🔴 HIGH (5-15% NPA typical) | Diversify across 100+ borrowers, min ₹500 each |
+| **No liquidity** | 🔴 HIGH | Money locked for loan tenure (12-36 months) |
+| **Platform risk** | 🟡 MEDIUM | Use only RBI-registered, check escrow compliance |
+| **No insurance** | 🔴 HIGH | Unlike bank FDs, no DICGC protection |
+| **Concentration** | 🟡 MEDIUM | Cap at ₹50K per borrower (RBI rule helps) |
+
+### When P2P Makes Sense
+
+✅ **Good for:**
+- Diversifying beyond equity/debt/gold (alternative asset class)
+- Generating monthly cash flow (EMI-style repayments)
+- Deploying small amounts (₹1-5L) you won't need for 1-3 years
+- If you're in 0-10% tax slab (post-tax return is attractive)
+
+❌ **Bad for:**
+- Emergency fund (no liquidity)
+- Large allocations (default risk too high)
+- 30% slab investors (post-tax return barely beats FD)
+- Risk-averse investors (principal loss is real and common)
+
+### Allocation Recommendation
+
+| Investor Profile | P2P Allocation |
+|-----------------|:-------------:|
+| Conservative | 0% |
+| Moderate | 0-3% of portfolio |
+| Aggressive | 3-5% of portfolio (max ₹5L) |
+
+### For User (Aggressive, 30% slab):
+- **Max allocation**: 3-5% of ₹57.5L = ₹1.7-2.9L
+- **Post-tax return**: ~8.4% (vs equity 10.5%, FD 4.9%)
+- **Verdict**: Optional. Only if you want cash flow diversification. Equity is better risk-adjusted AND tax-efficient for your slab.
+- **If investing**: Spread ₹2L across 200+ borrowers on Lendbox/12% Club. Accept 5-8% will default.
+
+### P2P vs Other Debt Options
+
+| Option | Pre-tax | Post-tax (30%) | Liquidity | Risk |
+|--------|---------|:--------------:|:---------:|:----:|
+| P2P Lending | 10-12% | 7-8.4% | ❌ Locked | High (defaults) |
+| Arbitrage Fund | 6-7% | 5.8-6.1% | ✅ T+1 | Very Low |
+| FD | 7-7.5% | 4.9-5.25% | ⚠️ Penalty | Zero (DICGC) |
+| Corporate Bond Fund | 7-8% | 4.9-5.6% | ✅ T+2 | Low-Medium |
+| SGBs | 2.5% + gold appreciation | **Tax-free at maturity** | ⚠️ 8yr lock | Low |
+
+**Bottom line**: P2P is a niche allocation (3-5% max) for cash flow diversification. It's NOT a replacement for equity or even debt funds for wealth building.
