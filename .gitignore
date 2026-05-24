@@ -34,8 +34,7 @@ profiles/
 .wealthforge/
 
 # Dependency Submodules (Managed by scripts/setup.mjs)
-# We ignore these to keep the repo as a clean template/orchestrator
-skills/finworth-js/
+# finworth-js stub is included — replace with npm package when published
 
 # IDE & Editors
 .vscode/

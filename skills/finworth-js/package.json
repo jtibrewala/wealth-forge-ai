@@ -1,0 +1,14 @@
+{
+  "name": "finworth-js",
+  "version": "0.8.0",
+  "description": "ESM stub matching finworth-js v0.8.0 API. Replace with `npm install finworth-js` when published to npm.",
+  "type": "module",
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "compatibility": {
+    "finworth-js": ">=0.8.0",
+    "note": "This stub implements retirementCorpus, inflationAdjusted, futureCost matching finworth-js v0.8.0 signatures. When finworth-js is published to npm, replace this with: npm install finworth-js@^0.8.0"
+  }
+}
