@@ -1,0 +1,41 @@
+{
+  "_note": "SAMPLE TEMPLATE — copy to ~/.wealthforge/profiles/primary.json and fill with your data",
+  "name": "",
+  "age": 35,
+  "retirement_age": 55,
+  "city": "Mumbai",
+  "metro": true,
+  "family": {
+    "spouse": false,
+    "kids": [],
+    "dependents": []
+  },
+  "income": {
+    "ctc": 0,
+    "monthly_take_home": 0,
+    "other_income": { "rental": 0, "freelance": 0, "interest": 0, "dividends": 0 }
+  },
+  "expenses": {
+    "essential_monthly": 0,
+    "lifestyle_monthly": 0
+  },
+  "loans": [],
+  "investments": {
+    "mf_portfolio": 0,
+    "epf": 0,
+    "ppf": 0,
+    "nps": 0,
+    "fd": 0,
+    "stocks": 0,
+    "real_estate": [],
+    "savings_account": 0
+  },
+  "insurance": {
+    "term_cover": 0,
+    "health_cover": 0
+  },
+  "goals": [],
+  "risk_profile": "moderate",
+  "tax_regime": "new",
+  "sip_total": 0
+}

@@ -27,6 +27,12 @@ Desktop.ini
 *.local
 .mcp.json.local
 
+# Personal Financial Data — NEVER commit
+# Profiles contain PII (name, age, salary, PAN, investments)
+profiles/
+*.profile.json
+.wealthforge/
+
 # Dependency Submodules (Managed by scripts/setup.mjs)
 # We ignore these to keep the repo as a clean template/orchestrator
 skills/finworth-js/
