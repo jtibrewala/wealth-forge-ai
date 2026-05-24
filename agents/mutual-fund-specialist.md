@@ -149,7 +149,9 @@ Debt: 1 Liquid (emergency) + 1 Short Duration (3-5yr goals)
 
 #### Step-up Projection
 With 15% annual step-up at 12% CAGR:
-- ₹90K/month → ₹52 Cr by age 55 (starting age 35)
+- ₹50K/month → ₹18 Cr by age 55 (starting age 25)
+- ₹90K/month → ₹32 Cr by age 55 (starting age 35)
+- ₹1.5L/month → ₹28 Cr by age 60 (starting age 45)
 
 ### 6. Direct vs Regular Plan Audit
 
@@ -217,8 +219,8 @@ Members: Rahul (₹45L) + Sneha (₹18L) + Father (₹12L)
 Combined: ₹75L across 42 schemes
 
 Combined Overlap:
-  Rahul: PPFAS Flexi + Sneha: PPFAS Flexi → ₹12L in same fund (consolidate under one)
-  Rahul: HDFC Top 100 + Mom: ICICI Bluechip → 68% overlap (same large-cap stocks)
+  Rahul: PPFAS Flexi + Sneha: PPFAS Flexi → ₹10L in same fund (consolidate under one)
+  Rahul: HDFC Top 100 + Father: ICICI Bluechip → 68% overlap (same large-cap stocks)
 
 Combined Concentration:
   HDFC AMC: 35% of family portfolio ⚠️ (reduce to <25%)
