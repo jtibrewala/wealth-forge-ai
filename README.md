@@ -88,7 +88,11 @@ npm run setup
 Open in **Cursor**, **Kiro CLI**, or **Claude Code**. The framework auto-injects the WealthForge persona.
 
 ### Example
-> *"I am 35, Mumbai, ₹42L CTC. Parse my CAS (attached), run overlap analysis, generate LTCG harvesting plan for this FY, and score my financial health."*
+> *"I am 25, Bangalore, ₹18L CTC. Parse my CAS, run overlap analysis, and suggest SIP allocation for FIRE by 45."*
+>
+> *"I am 35, Mumbai, ₹42L CTC. Generate LTCG harvesting plan for this FY and score my financial health."*
+>
+> *"I am 45, Delhi, ₹75L CTC. Build a retirement roadmap — how much more do I need to save monthly?"*
 
 ---
 
