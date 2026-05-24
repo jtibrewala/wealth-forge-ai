@@ -9,7 +9,7 @@
 import { execSync } from 'child_process';
 import { existsSync, writeFileSync, mkdirSync, readFileSync } from 'fs';
 import { join } from 'path';
-import { os } from 'os';
+import { homedir } from 'os';
 
 const PROJECT_ROOT = process.cwd();
 const AGENTS_DIR = join(PROJECT_ROOT, 'agents');
