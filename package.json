@@ -5,7 +5,8 @@
   "main": "scripts/setup.mjs",
   "type": "module",
   "scripts": {
-    "setup": "node scripts/setup.mjs"
+    "setup": "node scripts/setup.mjs",
+    "demo": "node demo.mjs"
   },
   "keywords": [
     "ai",
