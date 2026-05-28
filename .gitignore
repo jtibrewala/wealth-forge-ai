@@ -33,6 +33,9 @@ profiles/
 *.profile.json
 .wealthforge/
 
+# Customer CAS statements and financial documents — never commit
+data/
+
 # Dependency Submodules (Managed by scripts/setup.mjs)
 # finworth-js stub is included — replace with npm package when published
 

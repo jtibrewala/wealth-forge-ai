@@ -11,6 +11,16 @@ import { existsSync, writeFileSync, mkdirSync, readFileSync } from 'fs';
 import { join } from 'path';
 import { homedir } from 'os';
 
+/** Run a shell command, returning true on success and false on failure. */
+function tryExec(cmd, opts = {}) {
+    try {
+        execSync(cmd, { stdio: 'inherit', ...opts });
+        return true;
+    } catch {
+        return false;
+    }
+}
+
 const PROJECT_ROOT = process.cwd();
 const AGENTS_DIR = join(PROJECT_ROOT, 'agents');
 const SKILLS_DIR = join(PROJECT_ROOT, 'skills');
@@ -19,15 +29,32 @@ const RULES_DIR = join(PROJECT_ROOT, 'rules');
 console.log('🚀 Initializing WealthForge AI Agentic Workforce...');
 
 // 0. Install Root Dependencies
-console.log('📦 Installing project dependencies...');
-try {
-    execSync(`npm install --silent`, { stdio: 'inherit' });
-} catch (e) {
+console.log('📦 Installing Node.js project dependencies...');
+if (!tryExec('npm install --silent')) {
     console.error('⚠️ Root npm install failed. Some custom MCPs may not work.');
 }
 
+// 0b. Python venv + casparser (required for CAS PDF parsing)
+console.log('🐍 Setting up Python environment for CAS parsing...');
+const venvPath = join(PROJECT_ROOT, '.venv');
+const venvPython = join(venvPath, 'bin', 'python3');
+if (!existsSync(venvPath)) {
+    console.log('   Creating .venv...');
+    if (!tryExec('python3 -m venv .venv')) {
+        console.error('❌ Could not create Python venv. Ensure Python 3.12+ is installed.');
+    }
+}
+if (existsSync(venvPython)) {
+    console.log('   Installing casparser...');
+    if (tryExec(`${venvPython} -m pip install --quiet casparser`)) {
+        console.log('✅ casparser installed in .venv');
+    } else {
+        console.error('⚠️ casparser install failed. CAS parsing will not work.');
+    }
+}
+
 // 1. Core Directory Setup
-const dirs = ['agents', 'skills', 'rules', 'mcp', 'orchestrator', '.gemini/prompts'];
+const dirs = ['agents', 'skills', 'rules', 'mcp', 'orchestrator', 'data', '.gemini/prompts'];
 dirs.forEach(dir => {
     const fullPath = join(PROJECT_ROOT, dir);
     if (!existsSync(fullPath)) {
@@ -122,4 +149,6 @@ console.log('📍 Location: ' + PROJECT_ROOT);
 console.log('🤖 Agents: ' + dirs.length);
 console.log('📐 Math Engine: Integrated (finworth-js)');
 console.log('📄 Documents: Integrated (office-mcp)');
+console.log('📊 CAS Parser: Integrated (casparser via .venv)');
+console.log('📁 Data folder: Created (add CAS PDFs here — gitignored)');
 console.log('\nRun "gemini" or open in Cursor to start your financial planning session.');
