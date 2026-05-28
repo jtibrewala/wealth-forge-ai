@@ -7,9 +7,9 @@
  */
 
 import { execSync } from 'child_process';
-import { existsSync, writeFileSync, mkdirSync, readFileSync } from 'fs';
+import { existsSync, writeFileSync, mkdirSync } from 'fs';
 import { join } from 'path';
-import { homedir } from 'os';
+import { platform } from 'os';
 
 /** Run a shell command, returning true on success and false on failure. */
 function tryExec(cmd, opts = {}) {
@@ -37,7 +37,7 @@ if (!tryExec('npm install --silent')) {
 // 0b. Python venv + casparser (required for CAS PDF parsing)
 console.log('🐍 Setting up Python environment for CAS parsing...');
 const venvPath = join(PROJECT_ROOT, '.venv');
-const venvPython = join(venvPath, 'bin', 'python3');
+const venvPython = join(venvPath, platform() === 'win32' ? 'Scripts/python.exe' : 'bin/python3');
 if (!existsSync(venvPath)) {
     console.log('   Creating .venv...');
     if (!tryExec('python3 -m venv .venv')) {

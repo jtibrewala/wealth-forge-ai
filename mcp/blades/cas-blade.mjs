@@ -7,13 +7,17 @@ import { spawn } from "child_process";
 import { fileURLToPath } from "url";
 import path from "path";
 import fs from "fs";
+import { platform } from "os";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = path.resolve(__dirname, "../..");
 const BRIDGE = path.resolve(PROJECT_ROOT, "scripts/parse_cas.py");
 
 // Prefer the project venv's Python so casparser is always available
-const VENV_PYTHON = path.resolve(PROJECT_ROOT, ".venv/bin/python3");
+const VENV_PYTHON = path.resolve(
+    PROJECT_ROOT,
+    platform() === "win32" ? ".venv/Scripts/python.exe" : ".venv/bin/python3"
+);
 const PYTHON = fs.existsSync(VENV_PYTHON) ? VENV_PYTHON : "python3";
 
 function runPythonBridge(file, password, mode) {
