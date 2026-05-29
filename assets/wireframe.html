@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WealthForge AI Portal — Wireframe</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;color:#333}
+.wire-banner{position:fixed;top:0;left:0;right:0;background:#222;color:#fff;text-align:center;padding:8px;font-size:12px;z-index:1000}
+.screen{border:2px dashed #999;margin:60px auto 40px;max-width:1100px;background:#fff;border-radius:8px;overflow:hidden}
+.screen-title{background:#e8e8e8;padding:10px 20px;font-weight:700;font-size:13px;border-bottom:1px solid #ccc}
+.nav{display:flex;align-items:center;padding:14px 24px;border-bottom:1px solid #ddd;gap:20px}
+.nav .logo{font-weight:800;font-size:18px;color:#1a56db}
+.nav .links{display:flex;gap:14px;font-size:13px;color:#555}
+.nav .cta{margin-left:auto;background:#1a56db;color:#fff;padding:8px 16px;border-radius:6px;font-size:13px}
+.hero{text-align:center;padding:50px 24px}
+.hero h1{font-size:30px;margin-bottom:10px}
+.hero p{font-size:15px;color:#666;max-width:580px;margin:0 auto 20px}
+.btn{display:inline-block;background:#1a56db;color:#fff;padding:10px 24px;border-radius:6px;font-size:14px;text-decoration:none}
+.btn-outline{background:#fff;color:#1a56db;border:1px solid #1a56db;margin-left:10px}
+.section{padding:28px 24px}
+.section h2{font-size:18px;margin-bottom:14px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{border:1px solid #ddd;border-radius:8px;padding:16px}
+.card h3{font-size:13px;margin-bottom:6px}
+.card p{font-size:12px;color:#666}
+.upload-zone{border:2px dashed #1a56db;border-radius:10px;padding:40px;text-align:center;margin:16px 24px}
+.upload-zone p{color:#1a56db;font-weight:600}
+.upload-zone span{font-size:12px;color:#888;display:block;margin-top:6px}
+.table{width:100%;border-collapse:collapse;font-size:12px}
+.table th,.table td{padding:8px 12px;border-bottom:1px solid #eee;text-align:left}
+.table th{background:#f8f8f8;font-weight:600}
+.badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px}
+.badge-green{background:#dcfce7;color:#166534}
+.badge-red{background:#fee2e2;color:#991b1b}
+.badge-yellow{background:#fef9c3;color:#854d0e}
+.score-circle{width:90px;height:90px;border-radius:50%;border:7px solid #1a56db;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800;margin:0 auto 12px}
+.dim-bar{background:#e5e7eb;border-radius:4px;height:7px;margin-top:4px}
+.dim-fill{height:100%;border-radius:4px;background:#1a56db}
+.chat-container{display:flex;height:420px}
+.chat-sidebar{width:200px;border-right:1px solid #ddd;padding:14px;font-size:12px}
+.chat-main{flex:1;display:flex;flex-direction:column}
+.chat-messages{flex:1;padding:16px;overflow-y:auto}
+.chat-input{border-top:1px solid #ddd;padding:12px;display:flex;gap:8px}
+.chat-input input{flex:1;border:1px solid #ddd;border-radius:6px;padding:9px;font-size:12px}
+.chat-input button{background:#1a56db;color:#fff;border:none;border-radius:6px;padding:9px 14px;font-size:12px;cursor:pointer}
+.msg{margin-bottom:12px;padding:10px;border-radius:8px;max-width:75%;font-size:12px;line-height:1.5}
+.msg-user{background:#eff6ff;margin-left:auto}
+.msg-ai{background:#f3f4f6}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:16px 24px}
+.pricing-card{border:1px solid #ddd;border-radius:10px;padding:20px;text-align:center}
+.pricing-card.featured{border-color:#1a56db;box-shadow:0 4px 12px rgba(26,86,219,0.12)}
+.pricing-card h3{font-size:16px;margin-bottom:4px}
+.pricing-card .price{font-size:26px;font-weight:800;margin:10px 0}
+.pricing-card .price span{font-size:13px;font-weight:400;color:#666}
+.pricing-card ul{list-style:none;text-align:left;font-size:12px;margin:14px 0}
+.pricing-card ul li{padding:5px 0;border-bottom:1px solid #f0f0f0}
+.pricing-card ul li::before{content:"✓ ";color:#16a34a}
+.ltcg-boxes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:16px}
+.ltcg-box{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:14px;text-align:center}
+.ltcg-box .val{font-size:22px;font-weight:700;color:#16a34a}
+.ltcg-box .lbl{font-size:11px;color:#666;margin-top:3px}
+</style>
+</head>
+<body>
+<div class="wire-banner">📐 WIREFRAME — WealthForge AI Portal (v1.0 PRD) — Not a final design</div>
+
+<!-- SCREEN 1: Landing Page -->
+<div class="screen">
+<div class="screen-title">Screen 1 — Landing Page (Unauthenticated)</div>
+<div class="nav">
+  <div class="logo">⚡ WealthForge AI</div>
+  <div class="links"><span>Features</span><span>Pricing</span><span>About</span></div>
+  <div class="cta">Sign Up Free</div>
+</div>
+<div class="hero">
+  <h1>Am I on track?</h1>
+  <p>Upload your CAS statement. Get your XIRR, LTCG harvesting plan, and financial health score — backed by math, not opinions.</p>
+  <a class="btn">Upload CAS & Get Started</a>
+  <a class="btn btn-outline">See How It Works</a>
+</div>
+<div class="section">
+  <h2>What You Get (Free)</h2>
+  <div class="grid-3">
+    <div class="card"><h3>📊 Portfolio XIRR</h3><p>Per-fund returns vs benchmark. Know your real performance.</p></div>
+    <div class="card"><h3>💰 LTCG Harvesting</h3><p>Tax-free exit plan within ₹1.25L limit. Save ₹12,000–18,000.</p></div>
+    <div class="card"><h3>🏥 Health Score</h3><p>0–100 across 6 dimensions. Know exactly where you're weak.</p></div>
+  </div>
+</div>
+</div>
+
+<!-- SCREEN 2: CAS Upload -->
+<div class="screen">
+<div class="screen-title">Screen 2 — CAS Upload</div>
+<div class="nav">
+  <div class="logo">⚡ WealthForge AI</div>
+  <div class="links"><span>Dashboard</span><span>Chat</span><span>Settings</span></div>
+  <div class="cta">Pro ↑</div>
+</div>
+<div class="section">
+  <h2>Upload Your CAS Statement</h2>
+  <p style="font-size:13px;color:#666;margin-bottom:12px">Download from MFCentral, CAMS, or KFintech. We parse locally — your PDF is never stored.</p>
+</div>
+<div class="upload-zone">
+  <p>📄 Drop your CAS PDF here or click to browse</p>
+  <span>Supports CAMS, KFintech, MFCentral formats • Password-protected PDFs supported</span>
+</div>
+<div class="section" style="padding-top:0">
+  <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:6px;padding:12px;font-size:12px;color:#92400e">
+    🔒 Privacy: PDF is parsed in-memory and deleted immediately. Only structured data (fund names, units, NAV) is retained.
+  </div>
+</div>
+</div>
+
+<!-- SCREEN 3: Portfolio Dashboard -->
+<div class="screen">
+<div class="screen-title">Screen 3 — Portfolio Dashboard (Post-Upload)</div>
+<div class="nav">
+  <div class="logo">⚡ WealthForge AI</div>
+  <div class="links"><span>Dashboard</span><span>Chat</span><span>LTCG</span><span>Health</span></div>
+  <div class="cta">Pro ↑</div>
+</div>
+<div class="section">
+  <h2>Your Portfolio — 18 Active Schemes</h2>
+  <p style="font-size:12px;color:#666;margin-bottom:14px">Parsed from CAS • 3 folios • 2 AMCs • Last updated: May 2026</p>
+  <table class="table">
+    <tr><th>Fund Name</th><th>Category</th><th>Value</th><th>XIRR</th><th>vs Benchmark</th></tr>
+    <tr><td>Parag Parikh Flexi Cap</td><td>Flexi Cap</td><td>₹4,82,000</td><td>18.2%</td><td><span class="badge badge-green">+4.0%</span></td></tr>
+    <tr><td>HDFC Mid-Cap Opportunities</td><td>Mid Cap</td><td>₹3,15,000</td><td>14.8%</td><td><span class="badge badge-green">+1.2%</span></td></tr>
+    <tr><td>SBI Small Cap</td><td>Small Cap</td><td>₹2,90,000</td><td>9.1%</td><td><span class="badge badge-red">-5.1%</span></td></tr>
+    <tr><td>Axis Bluechip</td><td>Large Cap</td><td>₹2,10,000</td><td>8.4%</td><td><span class="badge badge-red">-3.8%</span></td></tr>
+    <tr><td>ICICI Pru Equity & Debt</td><td>Hybrid</td><td>₹1,85,000</td><td>12.6%</td><td><span class="badge badge-yellow">+0.4%</span></td></tr>
+  </table>
+  <p style="font-size:11px;color:#999;margin-top:10px">Showing 5 of 18 • Benchmark: Nifty 50 TRI (14.2% 5Y CAGR)</p>
+</div>
+</div>
+
+<!-- SCREEN 4: Financial Health Scorecard -->
+<div class="screen">
+<div class="screen-title">Screen 4 — Financial Health Scorecard</div>
+<div class="nav">
+  <div class="logo">⚡ WealthForge AI</div>
+  <div class="links"><span>Dashboard</span><span>Chat</span><span>LTCG</span><span>Health</span></div>
+  <div class="cta">Pro ↑</div>
+</div>
+<div class="section" style="text-align:center">
+  <h2>Your Financial Health</h2>
+  <div class="score-circle">72</div>
+  <p style="font-size:14px;font-weight:600;color:#1a56db">Good — Room to Improve</p>
+  <p style="font-size:12px;color:#666;margin-top:6px">Scored across 6 dimensions • Updated May 2026</p>
+</div>
+<div class="section" style="padding-top:0">
+  <div class="grid-3">
+    <div class="card"><h3>🏦 Emergency Fund</h3><p>4.2 months (target: 6)</p><div class="dim-bar"><div class="dim-fill" style="width:70%"></div></div></div>
+    <div class="card"><h3>💳 Debt Ratio</h3><p>EMI 28% of income (healthy)</p><div class="dim-bar"><div class="dim-fill" style="width:85%"></div></div></div>
+    <div class="card"><h3>🛡️ Insurance</h3><p>Term: ₹50L (need ₹1Cr)</p><div class="dim-bar"><div class="dim-fill" style="width:50%"></div></div></div>
+    <div class="card"><h3>📈 Investments</h3><p>SIP rate: 22% of income</p><div class="dim-bar"><div class="dim-fill" style="width:80%"></div></div></div>
+    <div class="card"><h3>📋 Tax Efficiency</h3><p>₹38K unclaimed deductions</p><div class="dim-bar"><div class="dim-fill" style="width:60%"></div></div></div>
+    <div class="card"><h3>🎯 Goal Progress</h3><p>Retirement: 62% on track</p><div class="dim-bar"><div class="dim-fill" style="width:62%"></div></div></div>
+  </div>
+  <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:6px;padding:12px;font-size:12px;margin-top:16px">
+    <strong>Priority Action:</strong> Increase term insurance to ₹1Cr (₹800/month premium increase) and build 2 more months of emergency fund.
+  </div>
+  <p style="font-size:11px;color:#999;margin-top:10px">🔒 Full breakdown available on Pro plan • Free tier shows score only</p>
+</div>
+</div>
+
+<!-- SCREEN 5: LTCG Harvesting Calculator -->
+<div class="screen">
+<div class="screen-title">Screen 5 — LTCG Harvesting Calculator (Always Free)</div>
+<div class="nav">
+  <div class="logo">⚡ WealthForge AI</div>
+  <div class="links"><span>Dashboard</span><span>Chat</span><span>LTCG</span><span>Health</span></div>
+  <div class="cta">Pro ↑</div>
+</div>
+<div class="section">
+  <h2>LTCG Tax Harvesting — FY 2025-26</h2>
+  <p style="font-size:12px;color:#666;margin-bottom:16px">Book up to ₹1.25L in long-term gains tax-free before March 31, 2026</p>
+  <div class="ltcg-boxes">
+    <div class="ltcg-box"><div class="val">₹1,08,400</div><div class="lbl">Harvestable LTCG</div></div>
+    <div class="ltcg-box"><div class="val">₹13,550</div><div class="lbl">Tax You Save</div></div>
+    <div class="ltcg-box"><div class="val">₹16,600</div><div class="lbl">Remaining Headroom</div></div>
+  </div>
+  <h3 style="font-size:14px;margin-bottom:10px">Recommended Exit Plan</h3>
+  <table class="table">
+    <tr><th>Fund</th><th>Units to Redeem</th><th>LTCG Booked</th><th>Action</th></tr>
+    <tr><td>Parag Parikh Flexi Cap</td><td>142.5 units</td><td>₹52,300</td><td><span class="badge badge-green">Redeem & Reinvest</span></td></tr>
+    <tr><td>HDFC Mid-Cap Opportunities</td><td>88.0 units</td><td>₹34,100</td><td><span class="badge badge-green">Redeem & Reinvest</span></td></tr>
+    <tr><td>ICICI Pru Equity & Debt</td><td>65.2 units</td><td>₹22,000</td><td><span class="badge badge-green">Redeem & Reinvest</span></td></tr>
+  </table>
+  <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:6px;padding:12px;font-size:12px;margin-top:14px">
+    💡 <strong>Strategy:</strong> Redeem these units, wait 1 business day, reinvest in the same fund. Your cost basis resets — future gains start from a higher base.
+  </div>
+</div>
+</div>
+
+<!-- SCREEN 6: Chat Interface -->
+<div class="screen">
+<div class="screen-title">Screen 6 — AI Chat Interface (3 free sessions/month)</div>
+<div class="chat-container">
+  <div class="chat-sidebar">
+    <strong style="font-size:13px">Sessions</strong>
+    <div style="margin-top:10px;padding:8px;background:#eff6ff;border-radius:4px;font-size:11px">📋 Portfolio Review<br><span style="color:#999">Today</span></div>
+    <div style="margin-top:6px;padding:8px;border-radius:4px;font-size:11px;border:1px solid #eee">💰 LTCG Planning<br><span style="color:#999">May 25</span></div>
+    <div style="margin-top:6px;padding:8px;border-radius:4px;font-size:11px;border:1px solid #eee">📊 Tax Regime<br><span style="color:#999">May 20</span></div>
+    <div style="margin-top:20px;font-size:11px;color:#999">Free: 1 of 3 sessions remaining</div>
+  </div>
+  <div class="chat-main">
+    <div class="chat-messages">
+      <div class="msg msg-user">Is my portfolio good? I uploaded my CAS.</div>
+      <div class="msg msg-ai">
+        <strong>Portfolio Analysis (18 schemes, 3 folios)</strong><br><br>
+        Your portfolio-weighted XIRR is <strong>13.4%</strong> over 4.2 years — slightly below the Nifty 50 TRI benchmark of 14.2%.<br><br>
+        ⚠️ <strong>2 underperformers</strong> (XIRR < 10% over 3Y):<br>
+        • SBI Small Cap: 9.1% vs category avg 15.2%<br>
+        • Axis Bluechip: 8.4% vs category avg 12.1%<br><br>
+        ⚡ <strong>Overlap alert:</strong> 72% overlap between HDFC Mid-Cap and Kotak Emerging Equity.<br><br>
+        <em style="color:#666;font-size:11px">⚠️ This is AI-generated analysis for informational purposes only. Not SEBI-registered investment advice.</em>
+      </div>
+      <div class="msg msg-user">Should I sell Axis Bluechip and buy Nifty 50 index fund?</div>
+      <div class="msg msg-ai">
+        I can analyze whether your current allocation has gaps and what a large-cap index fund would do for your portfolio balance — but I don't make specific buy/sell recommendations.<br><br>
+        Would you like me to:<br>
+        1. Compare your large-cap allocation vs target?<br>
+        2. Show the LTCG impact of exiting Axis Bluechip?
+      </div>
+    </div>
+    <div class="chat-input">
+      <input placeholder="Ask about your portfolio, tax, retirement...">
+      <button>Send</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- SCREEN 7: Pricing -->
+<div class="screen">
+<div class="screen-title">Screen 7 — Pricing Page</div>
+<div class="nav">
+  <div class="logo">⚡ WealthForge AI</div>
+  <div class="links"><span>Features</span><span>Pricing</span><span>About</span></div>
+  <div class="cta">Sign Up Free</div>
+</div>
+<div class="section" style="text-align:center">
+  <h2>Simple, Transparent Pricing</h2>
+  <p style="font-size:13px;color:#666">LTCG harvesting is always free. Upgrade when you need deeper planning.</p>
+</div>
+<div class="pricing-grid">
+  <div class="pricing-card">
+    <h3>Free</h3>
+    <div class="price">₹0<span>/forever</span></div>
+    <ul>
+      <li>CAS upload + portfolio summary</li>
+      <li>XIRR per fund</li>
+      <li>LTCG harvesting calculator</li>
+      <li>Health score (number only)</li>
+      <li>3 chat sessions/month</li>
+    </ul>
+    <a class="btn" style="width:100%;text-align:center;display:block">Get Started</a>
+  </div>
+  <div class="pricing-card featured">
+    <h3>Pro</h3>
+    <div class="price">₹499<span>/month</span></div>
+    <ul>
+      <li>Everything in Free</li>
+      <li>Full health scorecard breakdown</li>
+      <li>Unlimited chat sessions</li>
+      <li>Goal planner & FIRE roadmap</li>
+      <li>Tax optimizer (Old vs New)</li>
+      <li>Loan optimizer</li>
+      <li>PDF export of plans</li>
+    </ul>
+    <a class="btn" style="width:100%;text-align:center;display:block">Upgrade to Pro</a>
+  </div>
+  <div class="pricing-card">
+    <h3>Family</h3>
+    <div class="price">₹999<span>/month</span></div>
+    <ul>
+      <li>Everything in Pro</li>
+      <li>Up to 5 family profiles</li>
+      <li>Consolidated family scorecard</li>
+      <li>Spouse & parent CAS support</li>
+    </ul>
+    <a class="btn btn-outline" style="width:100%;text-align:center;display:block;margin:0">Upgrade to Family</a>
+  </div>
+</div>
+<div class="section" style="text-align:center;padding-top:0">
+  <p style="font-size:12px;color:#888">Annual plans: 2 months free • Cancel anytime • Powered by Razorpay</p>
+</div>
+</div>
+
+</body>
+</html>

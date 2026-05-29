@@ -25,3 +25,9 @@ On session start, read `~/.wealthforge/profiles/primary.json` for the user's com
 - `wealth-forge-hub` (MCP): Portfolio, Policy, Math, Risk blades
 - `finworth-math-engine` (MCP): SIP, XIRR, tax, salary breakup, EMI, gratuity
 - `office-mcp`: PDF/Excel parsing for CAS statements, Form 16, insurance docs
+
+## Project Skills
+Local skills stored in `.claude/skills/`. Use these when the user's request matches the skill description.
+
+- **idea-validator** (`.claude/skills/idea-validator.md`): Brutally honest validation of app/product ideas — market saturation, demand, feasibility, monetization. Use when user asks "should I build this?" or presents a new product concept.
+- **prd-writer** (`.claude/skills/prd-writer/SKILL.md`): AI-era PRD writing focused on decisions over documentation. Use when user asks for a PRD, product spec, or feature requirements document. Reference template at `.claude/skills/prd-writer/references/prd-template.md`.
