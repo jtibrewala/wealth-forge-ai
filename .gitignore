@@ -47,3 +47,7 @@ data/
 .project
 .settings/
 .buildpath
+
+# AI assistant local config (not for commit)
+.claude/
+.gemini/
